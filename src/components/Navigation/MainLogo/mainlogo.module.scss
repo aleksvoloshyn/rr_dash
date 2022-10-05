@@ -1,0 +1,23 @@
+@import './../../../styles/shared.scss';
+.mainLogo {
+  display: flex;
+  padding-left: 12px;
+  margin-bottom: 26px;
+  .mainLogoLogo {
+    margin-right: 8px;
+  }
+  .mainLogoTitle {
+    font-size: 30px;
+    opacity: 0.5;
+  }
+}
+
+.link {
+  color: $primary-color;
+}
+
+.activeLink {
+  color: $mainDark-color;
+
+  opacity: 0.5;
+}

@@ -1,9 +1,11 @@
 const mainItems = [
   { id: 1, title: 'Home' },
+  { id: 3, title: 'Cv' },
   { id: 2, title: 'Template' },
 ]
 
 const appsItems = [
+  { id: 7, title: 'FamillyTree' },
   { id: 1, title: 'Email' },
   { id: 2, title: 'Chat' },
   { id: 3, title: 'Todo' },
