@@ -1,0 +1,9 @@
+{
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+  "json.schemas": [],
+  "files.associations": {
+    "\"*.css\"": "\"tailwindcss\""
+  }
+}

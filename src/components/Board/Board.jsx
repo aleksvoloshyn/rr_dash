@@ -1,10 +1,12 @@
 import { Routes, Route } from 'react-router-dom'
-import Template from '../../pages/Template'
-import Calendar from '../../pages/Calendar'
+
+import ReactClass from '../../pages/ReactClass'
+import Forms from '../../pages/Forms'
+import Dogs from '../../pages/Dogs'
 import NotFoundPage from '../../pages/NotFoundPage'
 import Home from '../../pages/Home'
 import Famillytree from '../../pages/Famillytree/Famillytree'
-// import Cv from '../../pages/Cv'
+
 import styles from './board.module.scss'
 
 const Board = () => {
@@ -13,9 +15,11 @@ const Board = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="Home" element={<Home />} />
-        <Route path="Famillytree" element={<Famillytree />} />
-        <Route path="Calendar" element={<Calendar />} />
-        <Route path="Template" element={<Template />} />
+        <Route path="Forms" element={<Forms />} />
+        <Route path="React_class" element={<ReactClass initialValue={0} />} />
+
+        <Route path="Tree_PrimeReact" element={<Famillytree />} />
+        <Route path="Dogs" element={<Dogs />} />
 
         <Route path="*" element={<NotFoundPage />} />
       </Routes>

@@ -6,17 +6,17 @@ import Container from '../Container/Container'
 import Navigation from '../Navigation'
 import Toolbar from '../Toolbar'
 import Board from '../Board'
-import Cv from '../../pages/Cv'
 
 const App = () => {
   return (
-    <Container>
-      <Routes>
-        <Route path="Cv" element={<Cv />}></Route>
+    <Routes>
+      {/* <Route path="Cv_tailwindcss" element={<Cv />}></Route> */}
 
-        <Route
-          path="*"
-          element={
+      <Route
+        path="*"
+        element={
+          <Container>
+            {' '}
             <div className={styles.wrapper}>
               <Navigation />
               <div className={styles.toolsWithBoard}>
@@ -24,10 +24,10 @@ const App = () => {
                 <Board />
               </div>
             </div>
-          }
-        ></Route>
-      </Routes>
-    </Container>
+          </Container>
+        }
+      ></Route>
+    </Routes>
   )
 }
 

@@ -1,6 +1,7 @@
 .organizationchart-demo .card {
   overflow-x: auto;
-  margin-top: -400px;
+  padding-top: 20px;
+  /* margin-top: -400px; */
   /* for basic */
 }
 

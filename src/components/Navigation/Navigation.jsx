@@ -1,6 +1,6 @@
 import MainLogo from './MainLogo'
 import NavItems from './NavItems/NavItems'
-import { mainItems, appsItems, componentsItems } from '../../data/menuItems'
+import { mainItems, reactSt, projects } from '../../data/menuItems'
 
 import sprite from './../../images/svg/sprite.svg'
 
@@ -12,8 +12,8 @@ const Navigation = () => {
       <MainLogo />
 
       <NavItems items={mainItems} sprite={sprite} />
-      <NavItems items={appsItems} title={'APPS & PAGES'} sprite={sprite} />
-      <NavItems items={componentsItems} title={'COMPONENTS'} sprite={sprite} />
+      <NavItems items={reactSt} title={'APPS & PAGES'} sprite={sprite} />
+      <NavItems items={projects} title={'MY APPS'} sprite={sprite} />
     </nav>
   )
 }

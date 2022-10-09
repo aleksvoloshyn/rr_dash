@@ -21,7 +21,7 @@ const Famillytree = () => {
           type: 'person',
           className: 'p-person',
           // expanded: true,
-          data: { name: 'Ievgeniia', avatar: 'jane' },
+          data: { name: 'G', avatar: 'jane' },
           // children: [
           //   {
           //     label: 'Tax',
@@ -42,14 +42,14 @@ const Famillytree = () => {
               label: 'son',
               className: 'p-person',
               type: 'person',
-              data: { name: 'Tykhon', avatar: 'tykhon' },
+              data: { name: 'T', avatar: 'tykhon' },
               // className: 'department-cto',
             },
             {
               label: 'doughter',
               className: 'p-person',
               type: 'person',
-              data: { name: 'Daria', avatar: 'daria' },
+              data: { name: 'D', avatar: 'daria' },
               // className: 'department-cto',
             },
           ],
