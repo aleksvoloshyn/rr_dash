@@ -3,6 +3,7 @@ import styles from './reactClass.module.scss'
 import React, { Component } from 'react'
 import { Button } from 'primereact/button'
 import { ProgressSpinner } from 'primereact/progressspinner'
+import PageContainer from '../PageContainer/Container'
 
 import axios from 'axios'
 
@@ -68,73 +69,79 @@ class ReactClass extends Component {
 
   render() {
     return (
-      <div>
-        <div>
+      <PageContainer>
+        <div className={styles.wrapper}>
           {' '}
-          <h2 className={styles.centered}>Counter on classComponent REACT</h2>
-          <span className={styles.centered}>{this.state.value}</span>
-          <div className={styles.centered}>
+          <div>
+            {' '}
+            <h2 className={styles.centered}>Counter on classComponent REACT</h2>
+            <span className={styles.centered}>{this.state.value}</span>
+            <div className={styles.centered}>
+              <Button
+                className="p-button-success"
+                onClick={this.handlerIncrement}
+              >
+                Increment by {this.state.step}
+              </Button>
+
+              <Button
+                className="p-button-danger"
+                onClick={this.handlerDecrement}
+              >
+                Decrement by {this.state.step}
+              </Button>
+              <Button
+                className="p-button-secondary"
+                onClick={this.handlerReset}
+              >
+                Reset to {this.props.initialValue}
+              </Button>
+            </div>
+          </div>
+          {/* isLoading block */}
+          <div className={styles.wrap}>
             <Button
-              className="p-button-success"
-              onClick={this.handlerIncrement}
+              className={
+                this.state.isLoading ? ' p-button-warning' : ' p-button-help'
+              }
+              onClick={this.handlerIsLoading}
             >
-              Increment by {this.state.step}
+              isLoading {String(this.state.isLoading)}
+            </Button>
+            {this.state.isLoading && (
+              <ProgressSpinner
+                style={{ width: '80px', height: '80px' }}
+                strokeWidth="8"
+                fill="var(--surface-ground)"
+                animationDuration="1s"
+              />
+            )}
+          </div>
+          {/* http api */}
+          <div className={styles.wrap}>
+            <ul>
+              <li>
+                <img src={this.state.dog} alt="" className={styles.img} />
+              </li>
+            </ul>
+          </div>
+          {/* showBlockElement */}
+          <div className={styles.wrap}>
+            <Button
+              className={
+                this.state.showBlock ? ' p-button-warning' : ' p-button-info'
+              }
+              onClick={this.handlerShowBlock}
+            >
+              {!this.state.showBlock ? 'show hidden block' : 'hide'}
             </Button>
 
-            <Button className="p-button-danger" onClick={this.handlerDecrement}>
-              Decrement by {this.state.step}
-            </Button>
-            <Button className="p-button-secondary" onClick={this.handlerReset}>
-              Reset to {this.props.initialValue}
-            </Button>
+            {this.state.showBlock && (
+              <div className={styles.hiddenBlock}>HI, this IS hidden BLOCK</div>
+            )}
           </div>
         </div>
-
-        {/* isLoading block */}
-        <div className={styles.wrap}>
-          <Button
-            className={
-              this.state.isLoading ? ' p-button-warning' : ' p-button-help'
-            }
-            onClick={this.handlerIsLoading}
-          >
-            isLoading {String(this.state.isLoading)}
-          </Button>
-          {this.state.isLoading && (
-            <ProgressSpinner
-              style={{ width: '80px', height: '80px' }}
-              strokeWidth="8"
-              fill="var(--surface-ground)"
-              animationDuration="1s"
-            />
-          )}
-        </div>
-
-        {/* http api */}
-        <div className={styles.wrap}>
-          <ul>
-            <li>
-              <img src={this.state.dog} alt="" className={styles.img} />
-            </li>
-          </ul>
-        </div>
-
-        {/* showBlockElement */}
-        <div className={styles.wrap}>
-          <Button
-            className={
-              this.state.showBlock ? ' p-button-warning' : ' p-button-info'
-            }
-            onClick={this.handlerShowBlock}
-          >
-            {!this.state.showBlock ? 'show hidden block' : 'hide'}
-          </Button>
-
-          {this.state.showBlock && (
-            <div className={styles.hiddenBlock}>HI, this IS hidden BLOCK</div>
-          )}
-        </div>
-      </div>
+      </PageContainer>
     )
   }
 }

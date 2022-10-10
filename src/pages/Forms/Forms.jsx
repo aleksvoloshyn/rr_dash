@@ -8,6 +8,7 @@ import { RadioButton } from 'primereact/radiobutton'
 import { Button } from 'primereact/button'
 import { Card } from 'primereact/card'
 import { Avatar } from 'primereact/avatar'
+import PageContainer from '../PageContainer/Container'
 
 const Forms = () => {
   const [login, setLogin] = useState('')
@@ -49,7 +50,7 @@ const Forms = () => {
   }
 
   return (
-    <div>
+    <PageContainer>
       <form onSubmit={handlerSubmit} className={styles.form}>
         {/* text */}
         <div className={styles.formBlock}>
@@ -164,7 +165,7 @@ const Forms = () => {
           <Avatar className="mr-2" size="xlarge" shape="circle" />
         </Card>
       )}
-    </div>
+    </PageContainer>
   )
 }
 
