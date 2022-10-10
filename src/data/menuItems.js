@@ -13,8 +13,9 @@ const reactSt = [
   { id: 6, title: 'Pages' },
 ]
 const projects = [
-  { id: 1, title: 'Dogs' },
-  { id: 2, title: 'Tree_PrimeReact' },
+  { id: 1, title: 'Image_Finder' },
+  { id: 2, title: 'Dogs' },
+  { id: 3, title: 'Tree_PrimeReact' },
   // { id: 2, title: 'Cv_tailwindcss' },
   // { id: 1, title: 'Widgets' },
   // { id: 2, title: 'Icons' },
