@@ -8,6 +8,7 @@ import Home from '../../pages/Home'
 import Famillytree from '../../pages/Famillytree/Famillytree'
 import ImageFinder from '../../pages/ImageFinder'
 import Norris from '../../pages/Norris'
+import ToDoList from '../../pages/ToDoLIst/ToDoList'
 
 import styles from './board.module.scss'
 
@@ -24,6 +25,7 @@ const Board = () => {
         <Route path="Image_Finder" element={<ImageFinder />} />
         <Route path="Dogs" element={<Dogs />} />
         <Route path="Chuck_Norris" element={<Norris />} />
+        <Route path="ToDoList" element={<ToDoList />} />
 
         <Route path="*" element={<NotFoundPage />} />
       </Routes>

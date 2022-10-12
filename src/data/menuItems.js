@@ -14,9 +14,11 @@ const reactSt = [
 ]
 const projects = [
   { id: 1, title: 'Image_Finder' },
-  { id: 2, title: 'Dogs' },
-  { id: 2, title: 'Chuck_Norris' },
-  { id: 3, title: 'Tree_PrimeReact' },
+  { id: 2, title: 'ToDoList' },
+
+  { id: 3, title: 'Dogs' },
+  { id: 4, title: 'Chuck_Norris' },
+  { id: 5, title: 'Tree_PrimeReact' },
   // { id: 2, title: 'Cv_tailwindcss' },
   // { id: 1, title: 'Widgets' },
   // { id: 2, title: 'Icons' },

@@ -14,7 +14,7 @@ const Norris = () => {
   const showJoke = () => {
     // setIsLoading(false)
     getSomeJokes().then((res) => {
-      console.log(res)
+      // console.log(res)
       setJoke(res.value)
     })
   }
@@ -23,7 +23,7 @@ const Norris = () => {
     <div className={styles.chuck}>
       <span className={styles.textWrap}>
         {' '}
-        <h2 class={styles.title}>Click on Chuck for a new joke!</h2>
+        <h2 className={styles.title}>Click on Chuck for a new joke!</h2>
         <img src={dancingChuck} alt="" />
       </span>
       <img

@@ -1,0 +1,61 @@
+.todolist {
+  border: 1px solid black;
+  padding: 8px;
+}
+.todoTitle {
+  text-align: center;
+  margin-bottom: 20px;
+  color: black;
+  font-weight: 700;
+}
+.addTodo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.todoWrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+.todo {
+  border: 1px solid black;
+  width: 100%;
+  padding: 8px;
+}
+.done {
+  border: 1px solid black;
+  width: 100%;
+  padding: 8px;
+}
+
+.button {
+  padding: 6px;
+  width: 80px;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  font-weight: 700;
+  margin-right: 8px;
+
+  box-shadow: 0 2px 25px rgba(145, 132, 140, 0.5);
+  &:hover {
+    opacity: 70%;
+    outline: 0;
+  }
+}
+
+.buttonEdit {
+  background-color: lightgreen;
+  @extend .button;
+}
+
+.buttonRemove {
+  @extend .button;
+  background-color: lightcoral;
+}
+.buttonAdd {
+  @extend .button;
+  background-color: lightskyblue;
+}
