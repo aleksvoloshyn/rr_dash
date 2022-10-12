@@ -12,8 +12,8 @@ const Navigation = () => {
       <MainLogo />
 
       <NavItems items={mainItems} sprite={sprite} />
-      <NavItems items={reactSt} title={'APPS & PAGES'} sprite={sprite} />
       <NavItems items={projects} title={'MY APPS'} sprite={sprite} />
+      <NavItems items={reactSt} title={'REACT test'} sprite={sprite} />
     </nav>
   )
 }

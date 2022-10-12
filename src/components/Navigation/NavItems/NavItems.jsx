@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom'
 import styles from './navItems.module.scss'
+import { v4 as uuidv4 } from 'uuid'
 
 const NavItems = ({ items, title, sprite }) => {
   return (
@@ -8,7 +9,7 @@ const NavItems = ({ items, title, sprite }) => {
       <ul className={styles.NavItemsList}>
         {items.map((item) => {
           return (
-            <li key={item.id} className={styles.navItemsItem}>
+            <li key={uuidv4()} className={styles.navItemsItem}>
               {item.title === 'Home' ? (
                 <NavLink
                   to="/"

@@ -8,6 +8,7 @@ import Form from 'react-bootstrap/Form'
 import Table from 'react-bootstrap/Table'
 import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
+import { v4 as uuidv4 } from 'uuid'
 import PageContainer from '../PageContainer/Container'
 import { getDogsApi, getSuBreedApi, getBreedImg } from '../../servises/dogsApi'
 import styles from './dogs.module.scss'
@@ -74,7 +75,7 @@ const Dogs = () => {
               {breeds.map((breed, ind, arr) => {
                 // arr.splice(0, 0, 1)
                 return (
-                  <option key={ind} value={breed}>
+                  <option key={uuidv4()} value={breed}>
                     {breed}
                   </option>
                 )

@@ -7,6 +7,7 @@ import NotFoundPage from '../../pages/NotFoundPage'
 import Home from '../../pages/Home'
 import Famillytree from '../../pages/Famillytree/Famillytree'
 import ImageFinder from '../../pages/ImageFinder'
+import Norris from '../../pages/Norris'
 
 import styles from './board.module.scss'
 
@@ -22,6 +23,7 @@ const Board = () => {
         <Route path="Tree_PrimeReact" element={<Famillytree />} />
         <Route path="Image_Finder" element={<ImageFinder />} />
         <Route path="Dogs" element={<Dogs />} />
+        <Route path="Chuck_Norris" element={<Norris />} />
 
         <Route path="*" element={<NotFoundPage />} />
       </Routes>

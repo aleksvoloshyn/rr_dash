@@ -5,26 +5,25 @@ import Form from 'react-bootstrap/Form'
 import InputGroup from 'react-bootstrap/InputGroup'
 import styles from './searchbar.module.scss'
 
-const SearchBar = ({ onChangeHandler, query, onClickHandler }) => {
+const SearchBar = ({ onChangeHandler, onSubmitHandler, value }) => {
   return (
     <header className={styles.header}>
       <div className={styles.centered}>
-        <InputGroup className="mb-3">
-          <Button
-            type="submit"
-            variant="light"
-            id="button-addon1"
-            onClick={onClickHandler}
-          >
-            🏸
-          </Button>
-          <Form.Control
-            aria-label="Example text with button addon"
-            aria-describedby="basic-addon1"
-            placeholder="Search images "
-            onChange={onChangeHandler}
-          />
-        </InputGroup>
+        <form action="" onSubmit={onSubmitHandler}>
+          <InputGroup className="mb-3">
+            <Button type="submit" variant="light" id="button-addon1">
+              🏸
+            </Button>
+            <Form.Control
+              aria-label="inp"
+              aria-describedby="basic-addon1"
+              placeholder="Search images "
+              // onChange={onChangeHandler}
+              // value={value}
+              name="val"
+            />
+          </InputGroup>
+        </form>
       </div>
     </header>
   )
