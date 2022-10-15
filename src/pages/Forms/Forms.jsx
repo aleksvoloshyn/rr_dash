@@ -19,16 +19,24 @@ const Forms = () => {
   const [age, setAge] = useState('')
   const [showCard, setShowCard] = useState(false)
 
+  // for uncontrolled
+  const [uncontrolledname, setUncontrolledname] = useState('')
+  const [uncontrolledagreed, setUncontrolledagreed] = useState(false)
+  const [uncontrolledage, setUncontrolledage] = useState('')
+
   let loginInputId = shortid.generate()
   let emailInputId = shortid.generate()
   let passwordInputId = shortid.generate()
 
   const options = ['18-25', '26-35', '36+']
 
+  // onSubmit controlled components form handler
   const handlerSubmit = (e) => {
     e.preventDefault()
     setShowCard(true)
   }
+
+  // controlled inputs handlers
   const handlerOnNameChange = (e) => {
     setLogin(e.target.value)
   }
@@ -38,19 +46,30 @@ const Forms = () => {
   const handlerOnPasswordChange = (e) => {
     setPassword(e.target.value)
   }
-
-  const handleChangeAgreed = (e) => {
-    setAgreed(e.target.checked)
-  }
   const handlerGenderChange = (e) => {
     setGender(e.target.value)
   }
   const handlerAgeChange = (e) => {
     setAge(e.target.value)
   }
+  const handleChangeAgreed = (e) => {
+    setAgreed(e.target.checked)
+  }
+  // -------------------------------------
+
+  // Handler for uncontrolled components
+  const uncontroledSubmit = (e) => {
+    e.preventDefault()
+    setUncontrolledname(e.currentTarget.elements.login.value)
+    setUncontrolledagreed(String(e.currentTarget.elements.checkb.checked))
+    setUncontrolledage(e.currentTarget.elements.pets.value)
+  }
 
   return (
     <PageContainer>
+      <h2 style={{ marginBottom: 20, color: 'salmon', textAlign: 'center' }}>
+        Controlled Components
+      </h2>
       <form onSubmit={handlerSubmit} className={styles.form}>
         {/* text */}
         <div className={styles.formBlock}>
@@ -165,6 +184,46 @@ const Forms = () => {
           <Avatar className="mr-2" size="xlarge" shape="circle" />
         </Card>
       )}
+
+      <div className={styles.uncontroled}>
+        <h2 style={{ marginBottom: 20, color: 'salmon' }}>
+          Uncontrolled Components
+        </h2>
+        <form
+          action=""
+          className={styles.uncontrolledForm}
+          onSubmit={uncontroledSubmit}
+          style={{ marginBottom: 40 }}
+        >
+          <p className={styles.label}> Name</p>
+          <input
+            required
+            type="text"
+            placeholder="enter name"
+            name="login"
+            style={{ marginRight: 60 }}
+          />
+          <p className={styles.label}> Agree</p>
+          <input type="checkbox" name="checkb" style={{ marginRight: 60 }} />
+
+          <select name="pets" style={{ marginRight: 60 }}>
+            <option value="cats">cats</option>
+            <option value="dogs">dogs</option>
+            <option value="koalas">koalas</option>
+          </select>
+          <button
+            type="submit"
+            style={{ backgroundColor: 'salmon', border: 'none', padding: 8 }}
+          >
+            submit
+          </button>
+        </form>
+        <Card>
+          <p>Name: {uncontrolledname}</p>
+          <p>Agreed: {uncontrolledagreed}</p>
+          <p>Age: {uncontrolledage}</p>
+        </Card>
+      </div>
     </PageContainer>
   )
 }
