@@ -2,6 +2,7 @@ import PageContainer from '../PageContainer/PageContainer'
 import StylizationInline from './StylizationInline/StylizationInline'
 import StylizationVanila from './StylizationVanila'
 import StylizationMod from './StylizationMod'
+import StylizationStyled from './StylizationStyled'
 
 import './stylization.scss'
 
@@ -29,6 +30,9 @@ const Stylization = () => {
       </div>
       <div className="stylizationBlock">
         <StylizationMod colors={colors} />
+      </div>
+      <div className="stylizationBlock">
+        <StylizationStyled colors={colors} />
       </div>
     </PageContainer>
   )
