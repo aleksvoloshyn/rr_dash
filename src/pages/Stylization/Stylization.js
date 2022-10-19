@@ -22,6 +22,9 @@ const colors = [
 const Stylization = () => {
   return (
     <PageContainer>
+      <h2 style={{ textAlign: 'center', marginBottom: 12, color: 'black' }}>
+        Click on color title
+      </h2>
       <div className="stylizationBlock">
         <StylizationInline colors={colors} />
       </div>

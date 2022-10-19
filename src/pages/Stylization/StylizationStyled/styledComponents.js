@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 
 const StyledTitle = styled.h2`
   font-weight: 900;
