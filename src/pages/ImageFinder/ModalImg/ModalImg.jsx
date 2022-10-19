@@ -1,10 +1,10 @@
 import { useEffect } from 'react'
 import { createPortal } from 'react-dom'
-import styles from './modal.module.css'
+import styles from './modalImg.module.css'
 
 const modalRoot = document.querySelector('#modal-root')
 
-const Modal = ({ onClose, children }) => {
+const ModalImg = ({ onClose, children }) => {
   useEffect(() => {
     window.addEventListener('keydown', handleKeyDown)
   }, [])
@@ -34,4 +34,4 @@ const Modal = ({ onClose, children }) => {
   )
 }
 
-export default Modal
+export default ModalImg

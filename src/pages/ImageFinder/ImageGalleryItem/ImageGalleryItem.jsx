@@ -1,40 +1,23 @@
-// import { Image } from 'react-bootstrap'
-import Button from 'react-bootstrap/Button'
-import { useState, useEffect } from 'react'
-import Modal from 'react-bootstrap/Modal'
+import { v4 as uuidv4 } from 'uuid'
+
 import styles from './imageGalleryItem.module.scss'
 
-const ImageGalleryItem = ({ src, srcBig, altQuery }) => {
-  const [lgShow, setLgShow] = useState(false)
+const ImageGalleryItem = ({ toggle, images }) => {
   return (
-    <div className={styles.image}>
-      <img
-        src={src}
-        alt={altQuery}
-        className={styles.image}
-        // imageStyle=""
-        onClick={() => setLgShow(true)}
-      />
-
-      <Modal
-        size="lg"
-        show={lgShow}
-        onHide={() => setLgShow(false)}
-        aria-labelledby="example-modal-sizes-title-lg"
-      >
-        <Modal.Header closeButton></Modal.Header>
-        <Modal.Body>
-          {' '}
-          <img
-            src={srcBig}
-            alt={altQuery}
-            // className={styles.image}
-            // imageStyle=""
-            onClick={() => setLgShow(true)}
-          />
-        </Modal.Body>
-      </Modal>
-    </div>
+    <>
+      {images.map((item) => {
+        return (
+          <li onClick={toggle} className="ImageGalleryItem" key={uuidv4()}>
+            <img
+              src={item.webformatURL}
+              alt={item.tags}
+              className={styles.image}
+              data-largeimage={item.largeImageURL}
+            />
+          </li>
+        )
+      })}
+    </>
   )
 }
 

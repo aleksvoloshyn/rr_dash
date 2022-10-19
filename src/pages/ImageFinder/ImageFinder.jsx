@@ -6,15 +6,27 @@ import PageContainer from '../PageContainer/Container'
 import { ToastContainer, toast } from 'react-toastify'
 import { Circles } from 'react-loader-spinner'
 import { getImages } from '../../servises/imageFinderApi'
+import ModalImg from './ModalImg'
 
 import 'react-toastify/dist/ReactToastify.css'
 
 const ImageFinder = () => {
   const [images, setImages] = useState([])
-  const [query, setQuery] = useState('')
+  const [query, setQuery] = useState(null)
   const [page, setPage] = useState(1)
   const [isLoading, setIsLoading] = useState(false)
+  const [showModal, setShowModal] = useState(false)
+  const [largeImageSrc, setLargeImageSrc] = useState(false)
+  const [alt, setAlt] = useState('')
 
+  // scroll to the bottom of the page, on click load more
+  // useEffect(() => {
+  //   if (images.length > 0) {
+  //     document.body.scrollIntoView(0)
+  //   }
+  // }, [images])
+
+  // get images onLoadMore (page changing)
   useEffect(() => {
     getImages(query, page).then((res) => {
       setImages((pr) => [...pr, ...res])
@@ -27,11 +39,13 @@ const ImageFinder = () => {
     return setQuery(e.target.value)
   }
 
+  // onSearch button click
   const onSubmitHandler = (e) => {
     e.preventDefault()
     const inputValue = e.currentTarget.elements.val.value
     if (inputValue === '') {
       notify()
+      return
     }
     setIsLoading(true)
     setQuery(inputValue)
@@ -48,14 +62,18 @@ const ImageFinder = () => {
     setIsLoading(true)
     setPage((p) => p + 1)
     setIsLoading(false)
-    // getImages(query, page)
-    //   .then((res) => {
-    //     setPage((p) => p + 1)
-    //     return res
-    //   })
-    //   .then((res) => {
-    //     return setImages((pr) => [...pr, ...res])
-    //   })
+  }
+
+  const toggleModal = () => {
+    setShowModal(!showModal)
+  }
+
+  const setCurrentPictureSrc = (e) => {
+    setShowModal(!showModal)
+    if (e !== undefined) {
+      setLargeImageSrc(e.target.dataset.largeimage)
+      setAlt(e.target.alt)
+    }
   }
 
   return (
@@ -68,13 +86,21 @@ const ImageFinder = () => {
           value={query}
         />
 
-        {query.length !== 0 && (
+        {query !== null && (
           <ImageGallery
-            data={images}
-            altQuery={query}
+            images={images}
+            altQuery={alt}
             loadMoreHandler={loadMoreHandler}
             value={query}
+            toggleModal={setCurrentPictureSrc}
           />
+        )}
+        {showModal && (
+          <ModalImg onClose={toggleModal}>
+            <div>
+              <img src={largeImageSrc} alt={alt} />
+            </div>
+          </ModalImg>
         )}
         {isLoading && (
           <Circles
@@ -88,8 +114,9 @@ const ImageFinder = () => {
             visible={true}
           />
         )}
+        <span id="page-bottom"></span>
         <ToastContainer
-          position="top-center"
+          position="top-right"
           autoClose={3000}
           hideProgressBar={false}
           newestOnTop={false}
