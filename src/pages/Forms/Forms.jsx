@@ -8,7 +8,7 @@ import { RadioButton } from 'primereact/radiobutton'
 import { Button } from 'primereact/button'
 import { Card } from 'primereact/card'
 import { Avatar } from 'primereact/avatar'
-import PageContainer from '../PageContainer/Container'
+import PageContainer from '../PageContainer/PageContainer'
 
 const Forms = () => {
   const [login, setLogin] = useState('')

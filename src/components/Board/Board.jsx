@@ -9,6 +9,7 @@ import Famillytree from '../../pages/Famillytree/Famillytree'
 import ImageFinder from '../../pages/ImageFinder'
 import Norris from '../../pages/Norris'
 import ToDoList from '../../pages/ToDoLIst/ToDoList'
+import Stylization from '../../pages/Stylization'
 
 import styles from './board.module.scss'
 
@@ -20,6 +21,7 @@ const Board = () => {
         <Route path="Home" element={<Home />} />
         <Route path="Forms" element={<Forms />} />
         <Route path="React_class" element={<ReactClass initialValue={0} />} />
+        <Route path="Stylization" element={<Stylization />} />
 
         <Route path="Tree_PrimeReact" element={<Famillytree />} />
         <Route path="Image_Finder" element={<ImageFinder />} />

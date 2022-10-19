@@ -1,4 +1,4 @@
-import PageContainer from '../PageContainer/Container'
+import PageContainer from '../PageContainer/PageContainer'
 import styles from './notfoundpage.module.scss'
 
 const NotFoundPage = () => {

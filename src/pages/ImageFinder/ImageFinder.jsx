@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 
 import SearchBar from './Searchbar/Searchbar'
 import ImageGallery from './ImageGallery'
-import PageContainer from '../PageContainer/Container'
+import PageContainer from '../PageContainer/PageContainer'
 import { ToastContainer, toast } from 'react-toastify'
 import { Circles } from 'react-loader-spinner'
 import { getImages } from '../../servises/imageFinderApi'

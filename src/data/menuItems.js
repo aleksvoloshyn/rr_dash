@@ -6,7 +6,8 @@ const mainItems = [
 
 const reactSt = [
   { id: 1, title: 'React_class' },
-  { id: 2, title: 'Forms' },
+  { id: 2, title: 'Stylization' },
+  { id: 3, title: 'Forms' },
 
   { id: 4, title: 'Calendar' },
   { id: 5, title: 'Kanban' },

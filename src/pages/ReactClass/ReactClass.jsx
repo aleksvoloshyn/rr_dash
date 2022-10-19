@@ -3,7 +3,7 @@ import styles from './reactClass.module.scss'
 import React, { Component } from 'react'
 import { Button } from 'primereact/button'
 import { ProgressSpinner } from 'primereact/progressspinner'
-import PageContainer from '../PageContainer/Container'
+import PageContainer from '../PageContainer/PageContainer'
 
 import axios from 'axios'
 

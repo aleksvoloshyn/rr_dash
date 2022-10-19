@@ -9,7 +9,7 @@ import Table from 'react-bootstrap/Table'
 import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
 import { v4 as uuidv4 } from 'uuid'
-import PageContainer from '../PageContainer/Container'
+import PageContainer from '../PageContainer/PageContainer'
 import { getDogsApi, getSuBreedApi, getBreedImg } from '../../servises/dogsApi'
 import styles from './dogs.module.scss'
 

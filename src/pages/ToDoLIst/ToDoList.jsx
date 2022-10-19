@@ -9,11 +9,15 @@ const items = [
   { text: 'learn ASYNC/AWAIT', isDone: true },
 ]
 
+const localStorageItems = JSON.parse(localStorage.getItem('todo'))
+
+console.log(items)
+console.log(localStorageItems)
+
 const ToDoList = () => {
   const [todoInput, setTodoInput] = useState('')
   const [editedInput, setEditedInput] = useState('')
   const [currentIndex, setCurrentIndex] = useState(null)
-
   const [toDoItems, setToDoItems] = useState(items)
   const [showModal, setShowModal] = useState(false)
 
@@ -61,6 +65,7 @@ const ToDoList = () => {
       if (i === ind) {
         setEditedInput(item.text)
       }
+      return true
     })
   }
   // on editInputChange click handler
@@ -85,23 +90,29 @@ const ToDoList = () => {
     <div className={styles.todolist}>
       {showModal && (
         <Modal onClose={toggleModal}>
-          <div>
-            <div className={styles.addTodo}>
-              <input
-                type="text"
-                name="todo"
-                value={editedInput}
-                onChange={onEditInputChange}
-              />
+          <div className={styles.modalWrapper}>
+            <input
+              type="text"
+              name="todo"
+              value={editedInput}
+              onChange={onEditInputChange}
+              className={styles.addtodoInput}
+            />
 
-              <button type="button" onClick={onSaveChangesHandler}>
-                Save changes
-              </button>
-            </div>
+            <button
+              type="button"
+              onClick={onSaveChangesHandler}
+              className={styles.buttonSave}
+            >
+              Save changes
+            </button>
           </div>
         </Modal>
       )}
+
       <h1 className={styles.todoTitle}>TO-DO list APP</h1>
+
+      {/* add toDo block */}
       <div className={styles.addTodo}>
         <input
           type="text"
@@ -109,31 +120,42 @@ const ToDoList = () => {
           name="todo"
           value={todoInput}
           onChange={handlerOnChange}
+          className={styles.addtodoInput}
         />
 
-        <button type="button" onClick={addHandler}>
+        <button type="button" onClick={addHandler} className={styles.buttonAdd}>
           Add to-do
         </button>
       </div>
 
       <div className={styles.todoWrapper}>
+        {/* toDoList block */}
         <div className={styles.todo}>
-          <h2>To-Do</h2>
+          <h2 className={styles.totoListtitle}>To-Do</h2>
           <ul>
             {toDoItems.map((todo, ind) => {
               return (
                 !todo.isDone && (
-                  <li key={uuidv4()}>
+                  <li key={uuidv4()} className={styles.todoItem}>
                     <input
                       type="checkbox"
                       checked={todo.isDone}
                       onChange={() => onCheckboxChange(ind)}
+                      className={styles.addtodoInput}
                     />
-                    {todo.text}
-                    <button type="button" onClick={() => onEditHandler(ind)}>
+                    <p className={styles.todoText}>{todo.text}</p>
+                    <button
+                      type="button"
+                      className={styles.buttonEdit}
+                      onClick={() => onEditHandler(ind)}
+                    >
                       edit
                     </button>
-                    <button type="button" onClick={() => onDeleteHandler(ind)}>
+                    <button
+                      type="button"
+                      className={styles.buttonRemove}
+                      onClick={() => onDeleteHandler(ind)}
+                    >
                       delete
                     </button>
                   </li>
@@ -143,22 +165,27 @@ const ToDoList = () => {
           </ul>
         </div>
 
+        {/* toDo-DONE-List block */}
         <div className={styles.done}>
-          {' '}
-          <h2>done</h2>
+          <h2 className={styles.totoListtitle}>Done</h2>
           <ul>
             {toDoItems.map((todo, ind) => {
               return (
                 todo.isDone && (
-                  <li key={uuidv4()}>
-                    {' '}
+                  <li key={uuidv4()} className={styles.todoItem}>
                     <input
                       type="checkbox"
                       checked={todo.isDone}
                       onChange={() => onCheckboxChange(ind)}
+                      className={styles.addtodoInput}
                     />
-                    {todo.text}
-                    <button type="button" onClick={() => onDeleteHandler(ind)}>
+                    <p className={styles.addtodoInput}>{todo.text}</p>
+
+                    <button
+                      type="button"
+                      className={styles.buttonRemove}
+                      onClick={() => onDeleteHandler(ind)}
+                    >
                       delete
                     </button>
                   </li>
