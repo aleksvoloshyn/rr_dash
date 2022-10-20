@@ -9,8 +9,8 @@ const reactSt = [
   { id: 2, title: 'Stylization' },
   { id: 3, title: 'Forms' },
 
-  { id: 4, title: 'Calendar' },
-  { id: 5, title: 'Kanban' },
+  { id: 4, title: 'Routing' },
+  // { id: 5, title: 'Kanban' },
   { id: 6, title: 'Pages' },
 ]
 const projects = [

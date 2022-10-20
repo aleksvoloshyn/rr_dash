@@ -68,7 +68,7 @@ const Forms = () => {
   return (
     <PageContainer>
       <h2 style={{ marginBottom: 20, color: 'salmon', textAlign: 'center' }}>
-        Controlled Components
+        Controlled Elements
       </h2>
       <form onSubmit={handlerSubmit} className={styles.form}>
         {/* text */}
@@ -92,6 +92,7 @@ const Forms = () => {
               name="email"
               value={email}
               onChange={handlerOnEmailChange}
+              required
             />
           </label>
           <label className={styles.label} htmlFor={passwordInputId}>
@@ -102,11 +103,12 @@ const Forms = () => {
               name="password"
               value={password}
               onChange={handlerOnPasswordChange}
+              required
             />
           </label>
         </div>
 
-        {/* CHECKBOX */}
+        {/* CHECKBOX  RADIO  select*/}
         <div className={styles.formBlock}>
           {' '}
           <label className={styles.label}>
@@ -115,13 +117,9 @@ const Forms = () => {
               // type="checkbox"
               checked={agreed}
               onChange={handleChangeAgreed}
+              required
             />
           </label>
-        </div>
-
-        {/* RADIO */}
-        <div className={styles.formBlock}>
-          {' '}
           <label className={styles.label}>
             <p className={styles.label}>Male</p>
             <RadioButton
@@ -130,6 +128,7 @@ const Forms = () => {
               name="gender"
               value="male"
               onChange={handlerGenderChange}
+              required
             />
           </label>
           <label className={styles.label}>
@@ -140,13 +139,9 @@ const Forms = () => {
               name="gender"
               value="female"
               onChange={handlerGenderChange}
+              required
             />
           </label>
-        </div>
-
-        {/* select */}
-        <div className={styles.formBlock}>
-          {' '}
           <label className={styles.label}>
             <p className={styles.label}>Choose your age</p>
             <SelectButton
@@ -154,6 +149,7 @@ const Forms = () => {
               value={age}
               onChange={handlerAgeChange}
               options={options}
+              required
             />
           </label>
         </div>
@@ -181,13 +177,12 @@ const Forms = () => {
             {' '}
             <b>Age :</b> {age}
           </p>
-          <Avatar className="mr-2" size="xlarge" shape="circle" />
         </Card>
       )}
 
       <div className={styles.uncontroled}>
         <h2 style={{ marginBottom: 20, color: 'salmon' }}>
-          Uncontrolled Components
+          Uncontrolled Elements
         </h2>
         <form
           action=""

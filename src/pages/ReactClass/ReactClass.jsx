@@ -8,17 +8,17 @@ import PageContainer from '../PageContainer/PageContainer'
 import axios from 'axios'
 
 class ReactClass extends Component {
-  constructor() {
-    super()
-    this.handleIncrement = this.handleIncrement.bind(this)
-    this.handleDecrement = this.handleDecrement.bind(this)
-    this.handlerReset = this.handlerReset.bind(this)
-    this.handlerIsLoading = this.handlerIsLoading.bind(this)
-    this.state = {
-      value: '',
-      num: 0,
-    }
-  }
+  // constructor() {
+  //   super()
+  //   this.handleIncrement = this.handleIncrement.bind(this)
+  //   this.handleDecrement = this.handleDecrement.bind(this)
+  //   this.handlerReset = this.handlerReset.bind(this)
+  //   this.handlerIsLoading = this.handlerIsLoading.bind(this)
+  //   this.state = {
+  //     value: '',
+  //     num: 0,
+  //   }
+  // }
 
   // Default props
   static defaultProps = {
