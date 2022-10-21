@@ -9,11 +9,6 @@ const items = [
   { text: 'learn ASYNC/AWAIT', isDone: true },
 ]
 
-const localStorageItems = JSON.parse(localStorage.getItem('todo'))
-
-console.log(items)
-console.log(localStorageItems)
-
 const ToDoList = () => {
   const [todoInput, setTodoInput] = useState('')
   const [editedInput, setEditedInput] = useState('')
@@ -74,7 +69,6 @@ const ToDoList = () => {
   }
   // on saveChanges click handler
   const onSaveChangesHandler = () => {
-    console.log(currentIndex)
     const checked = toDoItems.map((item, i) => {
       if (i === currentIndex) {
         return { ...item, text: editedInput }

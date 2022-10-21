@@ -1,25 +1,25 @@
 const mainItems = [
-  { id: 1, title: 'Home' },
+  { id: 1, title: 'home' },
 
   // { id: 2, title: 'Template' },
 ]
 
 const reactSt = [
-  { id: 1, title: 'React_class' },
-  { id: 2, title: 'Stylization' },
-  { id: 3, title: 'Forms' },
+  { id: 1, title: 'react_class' },
+  { id: 2, title: 'stylization' },
+  { id: 3, title: 'forms' },
 
-  { id: 4, title: 'Routing' },
+  { id: 4, title: 'routing' },
   // { id: 5, title: 'Kanban' },
-  { id: 6, title: 'Pages' },
+  { id: 6, title: 'pages' },
 ]
 const projects = [
-  { id: 1, title: 'Image_Finder' },
-  { id: 2, title: 'ToDoList' },
+  { id: 1, title: 'image_finder' },
+  { id: 2, title: 'todolist' },
 
-  { id: 3, title: 'Dogs' },
-  { id: 4, title: 'Chuck_Norris' },
-  { id: 5, title: 'Tree_PrimeReact' },
+  { id: 3, title: 'dogs' },
+  { id: 4, title: 'chuck_norris' },
+  { id: 5, title: 'tree_primereact' },
   // { id: 2, title: 'Cv_tailwindcss' },
   // { id: 1, title: 'Widgets' },
   // { id: 2, title: 'Icons' },
