@@ -1,6 +1,6 @@
 import { useParams, useNavigate } from 'react-router-dom'
 import { Button } from 'react-bootstrap'
-import { FcHome } from 'react-icons/fc'
+import { MdWest } from 'react-icons/md'
 
 import items from './productsMock'
 import s from './routing.module.scss'
@@ -21,14 +21,15 @@ import s from './routing.module.scss'
 const ProductDetails = () => {
   const { id } = useParams()
   const navigate = useNavigate()
+  console.log(navigate)
   return (
     <main>
       <button
         type="button"
-        onClick={() => navigate('/routing')}
+        onClick={() => navigate(-1)}
         style={{ border: 'none', marginBottom: '12px' }}
       >
-        <FcHome />
+        <MdWest />
       </button>
 
       {items.map((items) => {
