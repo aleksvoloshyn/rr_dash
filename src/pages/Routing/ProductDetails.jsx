@@ -21,7 +21,7 @@ import s from './routing.module.scss'
 const ProductDetails = () => {
   const { id } = useParams()
   const navigate = useNavigate()
-  console.log(navigate)
+
   return (
     <main>
       <button

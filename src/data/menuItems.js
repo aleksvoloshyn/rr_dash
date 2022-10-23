@@ -15,11 +15,12 @@ const reactSt = [
 ]
 const projects = [
   { id: 1, title: 'image_finder' },
-  { id: 2, title: 'todolist' },
+  { id: 2, title: 'moviesearch' },
+  { id: 3, title: 'todolist' },
 
-  { id: 3, title: 'dogs' },
-  { id: 4, title: 'chuck_norris' },
-  { id: 5, title: 'tree_primereact' },
+  { id: 4, title: 'dogs' },
+  { id: 5, title: 'chuck_norris' },
+  { id: 6, title: 'tree_primereact' },
   // { id: 2, title: 'Cv_tailwindcss' },
   // { id: 1, title: 'Widgets' },
   // { id: 2, title: 'Icons' },

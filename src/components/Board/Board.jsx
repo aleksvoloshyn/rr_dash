@@ -11,7 +11,7 @@ import Norris from '../../pages/Norris'
 import ToDoList from '../../pages/ToDoLIst/ToDoList'
 import Stylization from '../../pages/Stylization'
 import Routing from '../../pages/Routing'
-// import About from '../../pages/Routing/About/About'
+import Moviesearch from '../../pages/Moviesearch'
 // import Contacts from '../../pages/Routing/Contacts/Contacts'
 
 import styles from './board.module.scss'
@@ -35,6 +35,7 @@ const Board = () => {
         <Route path="/dogs" element={<Dogs />} />
         <Route path="/chuck_norris" element={<Norris />} />
         <Route path="/todolist" element={<ToDoList />} />
+        <Route path="/moviesearch/*" element={<Moviesearch />} />
 
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
