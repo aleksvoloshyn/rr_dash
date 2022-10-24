@@ -18,5 +18,21 @@ const getMovieById = (id) => {
     .catch((error) => console.log(error.message))
   // .finally((response) => console.log(response))
 }
+const getCastById = (id) => {
+  return axios
+    .get(
+      `https://api.themoviedb.org/3/movie/${id}/credits?api_key=${apikey}&language=ru-RU`
+    )
+    .then((response) => response.data.cast)
+    .catch((error) => console.log(error.message))
+  // .finally((response) => console.log(response))
+}
+const getReviewsById = (id) => {
+  return axios
+    .get(`https://api.themoviedb.org/3/movie/${id}/reviews?api_key=${apikey}`)
+    .then((response) => response.data.results)
+    .catch((error) => console.log(error.message))
+  // .finally((response) => console.log(response))
+}
 
-export { getTrendingMovies, getMovieById }
+export { getTrendingMovies, getMovieById, getCastById, getReviewsById }
