@@ -34,5 +34,21 @@ const getReviewsById = (id) => {
     .catch((error) => console.log(error.message))
   // .finally((response) => console.log(response))
 }
+const getMovieByRequest = (query) => {
+  return axios
 
-export { getTrendingMovies, getMovieById, getCastById, getReviewsById }
+    .get(
+      `https://api.themoviedb.org/3/search/movie?api_key=${apikey}&language=en-US&query=${query}&page=1&include_adult=false`
+    )
+    .then((response) => response.data.results)
+    .catch((error) => console.log(error.message))
+  // .finally((response) => console.log(response))
+}
+
+export {
+  getTrendingMovies,
+  getMovieById,
+  getCastById,
+  getReviewsById,
+  getMovieByRequest,
+}

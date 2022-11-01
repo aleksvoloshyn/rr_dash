@@ -1,5 +1,6 @@
 const mainItems = [
   { id: 1, title: 'home' },
+  { id: 2, title: 'cv' },
 
   // { id: 2, title: 'Template' },
 ]

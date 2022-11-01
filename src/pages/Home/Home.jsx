@@ -1,10 +1,14 @@
+import Toolbar from './../../components/Toolbar/Toolbar'
 import styles from './home.module.scss'
 
 const home = () => {
   return (
     <>
-      <h2 className={styles.title}>HOME PAGE &#9751;</h2>
-      <p>my react ,js and css training platform , made by myself on REACT</p>
+      <Toolbar />
+      <h2 className={styles.title}>HOME PAGE </h2>
+      <p className={styles.text}>
+        Alex's Voloshyn training dashboard for some apps, made with REACT JS
+      </p>
     </>
   )
 }
