@@ -10,7 +10,9 @@ import styled from 'styled-components'
 export const Panel = styled.div`
   background-color: #e1d8cf;
   padding: 26px;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   /* display: grid;
   justify-content: center; */
 `
@@ -20,8 +22,11 @@ export const Avatar = styled.img`
 `
 export const PanelSection = styled.section`
   color: #373741;
+  width: 100%;
 `
 export const PanelHeader = styled.div`
+  /* font-family: 'Satisfy', sans-serif; */
+  text-align: center;
   color: #e1d8cf;
   padding: 16px;
   background-color: #373741;

@@ -20,7 +20,7 @@ const PanelComp = () => {
   return (
     <>
       <Panel>
-        <Avatar src={avatar} />
+        <Avatar src={avatar} width={350} />
 
         <PanelSection>
           <PanelHeader>CONTACTS</PanelHeader>
