@@ -31,7 +31,6 @@ const NavItems = ({ items, title, sprite }) => {
                   }
                 >
                   <svg className={styles.navItemsLogo}>
-                    {/* <use xlinkHref={`${sprite}#${item.title}`} /> */}
                     <use xlinkHref={`${sprite}#${item.title} `} />
                   </svg>{' '}
                   {item.title}

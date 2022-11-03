@@ -13,7 +13,6 @@ const MainLogo = () => {
           width="100"
           className={styles.mainLogoLogo}
         />
-        {/* <h1 className={styles.mainLogoTitle}>ALEX</h1> */}
       </div>
     </NavLink>
   )

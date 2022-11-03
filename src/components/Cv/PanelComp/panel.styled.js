@@ -1,11 +1,5 @@
 import styled from 'styled-components'
 
-// const screens = {
-//   mobile: '320px',
-//   tablet: '768px',
-//   desktop: '1280px',
-// }
-
 // *******Panel**********
 export const Panel = styled.div`
   background-color: #e1d8cf;
@@ -13,8 +7,6 @@ export const Panel = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* display: grid;
-  justify-content: center; */
 `
 export const Avatar = styled.img`
   border-radius: 50%;
@@ -25,7 +17,6 @@ export const PanelSection = styled.section`
   width: 100%;
 `
 export const PanelHeader = styled.div`
-  /* font-family: 'Satisfy', sans-serif; */
   text-align: center;
   color: #e1d8cf;
   padding: 16px;

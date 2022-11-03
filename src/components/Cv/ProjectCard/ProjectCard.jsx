@@ -20,10 +20,6 @@ const ProjectCard = ({
       </div>
 
       <div className="card-content card-back">
-        {/* <img
-          src=""
-          alt=""
-        /> */}
         <div className="card-body">
           <b>Repository: </b>
           <a href={backRepo}>GITGUB</a>

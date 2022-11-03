@@ -11,9 +11,6 @@ import {
   BoardItem,
   BoardItemLink,
   BoardCardItems,
-  // BoardCardItem,
-  // BoardImage,
-  // BoardCardDescription,
 } from './board.styled'
 
 import ProjectCard from './../ProjectCard/ProjectCard'
