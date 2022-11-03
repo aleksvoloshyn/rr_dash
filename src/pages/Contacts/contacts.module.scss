@@ -1,0 +1,21 @@
+table,
+th,
+td {
+  border: 1px solid;
+  padding: 10px;
+}
+
+table {
+  margin-top: 18px;
+  width: 100%;
+  text-align: center;
+}
+
+td {
+  background-color: white;
+}
+
+th {
+  background-color: lightpink;
+  color: black;
+}

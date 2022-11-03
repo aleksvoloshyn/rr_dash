@@ -20,6 +20,7 @@ const projects = [
   { id: 3, title: 'todolist' },
 
   { id: 4, title: 'dogs' },
+  { id: 7, title: 'contacts_redux' },
   { id: 5, title: 'chuck_norris' },
   { id: 6, title: 'tree_primereact' },
   // { id: 2, title: 'Cv_tailwindcss' },
