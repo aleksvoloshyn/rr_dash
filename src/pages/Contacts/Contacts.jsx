@@ -39,12 +39,12 @@ const Contacts = () => {
       </form>
 
       <div className={s.contactsList}>
-        <table>
+        <table className={s.table}>
           <thead>
-            <tr>
-              <th>Name</th>
-              <th>Age</th>
-              <th>Position</th>
+            <tr className={s.tableTr}>
+              <th className={s.tableTitles}>Name</th>
+              <th className={s.tableTitles}>Age</th>
+              <th className={s.tableTitles}>Position</th>
             </tr>
           </thead>
 
@@ -52,9 +52,9 @@ const Contacts = () => {
             return (
               <tbody key={uuidv4()}>
                 <tr>
-                  <td>{cont.name}</td>
-                  <td>{cont.age}</td>
-                  <td>{cont.position}</td>
+                  <td className={s.tableItem}>{cont.name}</td>
+                  <td className={s.tableItem}>{cont.age}</td>
+                  <td className={s.tableItem}>{cont.position}</td>
                 </tr>
               </tbody>
             )
