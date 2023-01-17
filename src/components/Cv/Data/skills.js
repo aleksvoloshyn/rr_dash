@@ -22,9 +22,8 @@ export const softskills = [
   { id: 2, title: 'Open-minded' },
   { id: 3, title: 'Teamwork' },
   { id: 4, title: 'Self-motivated' },
-  { id: 5, title: 'Responsive / Adaptive design' },
   {
-    id: 6,
+    id: 5,
     title: 'Ability to work efficiently both individually and in a team',
   },
 ]
@@ -33,5 +32,5 @@ export const languages = [
   { id: 1, title: 'English - Upper intermediate' },
   { id: 2, title: 'French - Elementary' },
   { id: 3, title: 'Ukrainian - Native' },
-  { id: 4, title: 'Russian - frea' },
+  { id: 4, title: 'Russian - free' },
 ]

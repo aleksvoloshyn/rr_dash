@@ -49,19 +49,19 @@ const teamProjects = [
     frontContent: 'The website with a responsive layout.',
     role: 'developer',
     techStack: 'HTML, SASS, JS, Parsel',
-    backRepo: 'https://github.com/aleksvoloshyn/filmoteka',
+    backRepo: 'https://github.com/aleksvoloshyn/iceCream',
     backSite: 'https://nataliiavalko.github.io/parcel-project-template/',
   },
-  {
-    id: 3,
-    frontTitle: 'Kapu$ta ',
-    imageSrc: kapusta,
-    frontContent: 'Financial accounting app.Teamwork.',
-    role: 'developer(reports)',
-    techStack: 'HTML, SASS, JS, WEBPACK, REACT, RTK',
-    backRepo: 'https://github.com/aleksvoloshyn/kapusta',
-    backSite: 'https://adamants-kapusta.netlify.app/',
-  },
+  // {
+  //   id: 3,
+  //   frontTitle: 'Kapu$ta ',
+  //   imageSrc: kapusta,
+  //   frontContent: 'Financial accounting app.Teamwork.',
+  //   role: 'developer(reports)',
+  //   techStack: 'HTML, SASS, JS, WEBPACK, REACT, RTK',
+  //   backRepo: 'https://github.com/aleksvoloshyn/kapusta',
+  //   backSite: 'https://adamants-kapusta.netlify.app/',
+  // },
 ]
 const myOwnProjects = [
   {

@@ -12,6 +12,7 @@ import Stylization from '../../pages/Stylization'
 import Routing from '../../pages/Routing'
 import Moviesearch from '../../pages/Moviesearch'
 import Contacts from '../../pages/Contacts'
+import Hooks from '../../pages/Hooks/Hooks'
 
 import styles from './board.module.scss'
 
@@ -33,6 +34,7 @@ const Board = () => {
         <Route path="/todolist" element={<ToDoList />} />
         <Route path="/moviesearch/*" element={<Moviesearch />} />
         <Route path="/contacts_redux/*" element={<Contacts />} />
+        <Route path="/hooks" element={<Hooks />} />
 
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
